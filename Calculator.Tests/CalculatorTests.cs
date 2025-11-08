@@ -41,6 +41,13 @@ namespace Calculator.Tests
         }
 
         [Test]
+        public void SubtractionReturnsCorrectResultForTwoPositiveDecimals()
+        {
+            var calc = new BYT3_2.Calculator(5.1, 3.1, '-');
+            Assert.That(calc.Calculate(), Is.EqualTo(2.0).Within(0.001));
+        }
+
+        [Test]
         public void SubtractionReturnsCorrectResultForTwoNegatives()
         {
             var calc = new BYT3_2.Calculator(-5, -3, '-');
